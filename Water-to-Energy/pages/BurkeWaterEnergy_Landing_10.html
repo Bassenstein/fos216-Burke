@@ -523,16 +523,42 @@ footer strong { color:rgba(245,240,232,0.5); }
   nav { display:none; }
   .band-dark,.band-lake,.band-teal { background:white !important; color:black !important; }
 }
+
+/* ── PAGE SWITCHER (cross-page nav) ── */
+#mainnav { height:auto; min-height:52px; flex-wrap:wrap; gap:8px 18px; padding:9px 24px; }
+a.nav-logo { text-decoration:none; color:var(--teal-l); white-space:nowrap; }
+a.nav-logo:hover { color:#ffffff; }
+.page-switcher { display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; }
+.page-btn {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+  color:rgba(245,240,232,0.72); text-decoration:none; white-space:nowrap;
+  padding:6px 13px; border:1px solid rgba(45,201,176,0.30); border-radius:4px;
+  background:rgba(45,201,176,0.05);
+  transition:color .2s, background .2s, border-color .2s;
+}
+.page-btn:hover { color:var(--teal-l); border-color:var(--teal-l); background:rgba(45,201,176,0.14); }
+.page-btn.active { color:#04283c; background:var(--teal-l); border-color:var(--teal-l); cursor:default; }
+@media(max-width:768px){
+  #mainnav { display:flex; padding:8px 14px; }
+  .page-switcher { justify-content:flex-start; }
+  .page-btn { font-size:10px; letter-spacing:1px; padding:5px 10px; }
+}
 </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- ── NAV / PAGE SWITCHER ── -->
 <nav id="mainnav" class="visible">
-  <div class="nav-logo">Burke Lakefront · Water-to-Energy Campus</div>
-  <ul class="nav-links">
-    <li><a href="#timeline">Development Timeline</a></li>
-  </ul>
+  <a class="nav-logo" href="BurkeWaterEnergy_Landing.html">Burke Lakefront · Water-to-Energy Campus</a>
+  <div class="page-switcher">
+    <a class="page-btn" href="BurkeWaterEnergy_Landing_02-03.html">Campus Zones – Core Process</a>
+    <a class="page-btn" href="BurkeWaterEnergy_Landing_04-05.html">Power System – Ammonia &amp; Chemicals</a>
+    <a class="page-btn" href="BurkeWaterEnergy_Landing_06.html">Data Center</a>
+    <a class="page-btn" href="BurkeWaterEnergy_Landing_07.html">Educational Pipeline</a>
+    <a class="page-btn" href="BurkeWaterEnergy_Landing_08-09.html">Financial Analysis – Policy Strategy</a>
+    <a class="page-btn active" href="BurkeWaterEnergy_Landing_10.html">Development Timeline</a>
+  </div>
 </nav>
 
 <!-- ════════════════════════════════════════════════════════════════════
